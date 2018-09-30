@@ -1,0 +1,256 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width = device-width, initial-scale = 1')
+    title Bootstrap Tutorial
+    script(src='script.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js')
+    link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Pacifico', rel='stylesheet', type='text/css')
+    style(type='text/css').
+      body {
+      font-size: 150.5%;
+      font-family: arial, sans-serif;
+      }
+      header{
+      color: grey;
+      font-size: 28px;
+      }
+      #jumbotron
+      {
+      padding-top: 0px;
+      }
+      #websiteTitle{
+      font-size: 10em;
+      vertical-align: middle;
+      font-family: 'Pacifico', cursive;
+      padding-left: 15px;
+      color: #191970;
+      }
+      #websiteSlogan{
+      font-size: 5.4em;
+      }
+      /* Carousel Styling */
+      .slide1{
+      background-image: url('bulb.jpg');
+      height: 350px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      }
+      .slide2{
+      background-image: url('green.jpg');
+      height: 350px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      }
+      .slide3{
+      background-image: url('agri.jpg');
+      height: 350px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      }
+      .carousel-caption h1{
+      font-size: 5.4em;
+      font-family: 'Pacifico', cursive;
+      padding-bottom: .4em;
+      }
+      .carousel-caption p{
+      font-size: 2em;
+      }
+      .img_size p{
+      height: 350px;
+      max-height: 350px;
+      min-height: 350px;
+      width: 350px;
+      min-width: 350px;
+      max-width: 350px;
+      padding-top: 10px;
+      }
+  body
+    #theCarousel.carousel.slide(data-ride='carousel')
+      // Define how many slides to put in the carousel
+      ol.carousel-indicators
+        li.active(data-target='#theCarousel', data-slide-to='0')  
+        li(data-target='#theCarousel', data-slide-to='1')  
+        li(data-target='#theCarousel', data-slide-to='2')  
+      // Define the text to place over the image
+      .carousel-inner
+        .item.active
+          .slide1
+          .carousel-caption
+            h1 Amazing Environment
+            p Thousands of ways to save it
+            p
+              a.btn.btn-primary.btn-sm(href='#') Get them Now
+        .item
+          .slide2
+          .carousel-caption
+            h1 Yarra agribusiness simulation
+            p Better way to understand the food chain 
+        .item
+          .slide3
+          .carousel-caption
+            h1 Food for Thought
+            p Fills the soul
+      // Set the actions to take when the arrows are clicked
+      a.left.carousel-control(href='#theCarousel', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left  
+      a.right.carousel-control(href='#theCarousel', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right
+    // Collapsible Navigation Bar
+    .container
+      // .navbar-fixed-top, or .navbar-fixed-bottom can be added to keep the nav bar fixed on the screen
+      nav.navbar.navbar-default
+        .container-fluid
+          // Brand and toggle get grouped for better mobile display
+          .navbar-header
+            // Button that toggles the navbar on and off on small screens
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+              // Hides information from screen readers
+              span.sr-only
+              // Draws 3 bars in navbar button when in small mode
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+          // Collect the nav links, forms, and other content for toggling
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li.active
+                a(href='#Intro')
+                  | Home
+                  span.sr-only (current)
+              li
+                a(href='#issues') Issues
+              li
+                a(href='#Stats') Statistics
+              li
+                a(href='#solution') Solution
+              li
+                a(href='#about') About
+              li
+                a(href='#Contact') Contact Us
+            // navbar-left will move the search to the left
+            // /.navbar-collapse
+            // /.container-fluid
+    .container.text-center.row.jumbotron.col-lg-8.col-lg-offset-2.col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
+      a(name='Intro')
+      header Introduction
+      .col-lg-10.col-lg-offset-1.col-md-8.col-md-offset-2.col-sm-6.col-sm-offset-3
+        p
+          | In today’s world, planning and taking precautions for any problem ahead in time helps us live through any situation. Similarly, planning for food supply and cultivation, helps us sustain any problems we may face in future. Food supply can be affected by various factors, such as population, temperature and rainfall/water availability and how they affect the food production. In this website, we have statistical analysis and graphs of these causes on the food production in all the states of Australia and in different years. We also have solutions which can help farmers and agriculturists to plan ahead for an upcoming challenge.
+    .container.text-center.row.jumbotron.col-lg-8.col-lg-offset-2.col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
+      a(name='issues')
+      header Issues
+      .col-lg-10.col-lg-offset-1.col-md-8.col-md-offset-2.col-sm-6.col-sm-offset-3
+        img.img-responsive(src='issues.jpg')
+    br
+    br
+    br
+    .container.text-center.row.jumbotron.col-lg-8.col-lg-offset-2.col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
+      a(name='Stats')
+      header Statistics
+      .col-lg-12.col-lg-offset-0.col-md-12.col-md-offset-0.col-sm-10.col-sm-offset-1
+        // Java Script
+        .wrapper
+          h1
+          h2 Data collected from various sources
+          select#cause.center
+            option#a(value='aa') Please select the cause
+            option#b(value='1') Population
+            option#c(value='2') Rainfall
+            option#d(value='3') Temperature
+          select#effect.center
+            option#e(value='ee') Please select the crop
+            option#f(value='1') Cotton
+            option#g(value='2') Tomato
+            option#h(value='3') Barley
+          select#xaxis.center(onchange="graph()")
+            option#i(value='ii') Please select the factor
+            option#j(value='1') Year
+            option#k(value='2') State
+
+          canvas(id='myChart' width='600' height='450')
+          canvas(id='myChart2' width='600' height='150')
+          script(src="script.js")
+          //select(id="test1" )
+            option(value='1') Population
+            option(value='2') Rainfall
+            option(value='3') Temprature
+          //select(id="test2" )
+            option(value='1') Cotton
+            option(value='2') Tomato
+            option(value='3') Barley
+          //select#xaxis.center(id="test3" onchange="graph()")
+            option(value='1') Year
+            option(value='2') State
+          canvas(id='myChart' width='600' height='450')
+          canvas(id='myChart2' width='600' height='150')
+    script(src='https://www.gstatic.com/firebasejs/5.5.2/firebase.js')
+    script(src="script.js")
+    script.
+      // Initialize Firebase
+      var config = {
+      apiKey: "AIzaSyAdJ2BJxDNj4cYc3Q5XFyb-z2HZGXzcL_o",
+      authDomain: "yarra-agribusiness-a.firebaseapp.com",
+      databaseURL: "https://yarra-agribusiness-a.firebaseio.com",
+      projectId: "yarra-agribusiness-a",
+      storageBucket: "",
+      messagingSenderId: "354665764987"
+      };
+      firebase.initializeApp(config);
+    br
+    br
+    br
+    .container.text-center.row.jumbotron.col-lg-8.col-lg-offset-2.col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
+      a(name='solution')
+      header.font-family-Pacifico Solutions
+      .col-lg-10.col-lg-offset-1.col-md-8.col-md-offset-2.col-sm-6.col-sm-offset-3
+        #sol.font-family-Pacifico
+          img.img-responsive(src='solution.gif')
+    br
+    br
+    br
+    .container.row.jumbotron.col-lg-8.col-lg-offset-2.col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
+      header.text-center About Us
+      .col-lg-10.col-lg-offset-1.col-md-8.col-md-offset-2.col-sm-6.col-sm-offset-3
+        a(name='about')
+        p
+          | We are from team A of yr-agribusiness-simulation project of unit SIT-764, currently studing at Deakin Burwood campus. our team members and faculty details are as follows:
+        ul
+          li Alessio Bonti (Unit chair)
+          li Wei Luo (Supervisor)
+          li Saurav Suman (Team Lead)
+          li Malyun Hilowle (Product Owner)
+          li Sarabpreet Singh (UI designer)
+          li Sneha Talari (Front-End Developer)
+          li Ishmeen Chawla (Back-end Developer)
+          li Gurjant Singh (Back-end Developer)
+        p
+    br
+    br
+    br
+    .container.row.jumbotron.col-lg-8.col-lg-offset-2.col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
+      header.text-center Contact Us
+      .col-lg-10.col-lg-offset-1.col-md-8.col-md-offset-2.col-sm-6.col-sm-offset-3
+        a(name='Contact')
+        form(action='#')
+          label(for='name') Name:
+          input#name.form-control(type='text', name='name')
+          br
+          label(for='Email') E-mail
+          input#Email.form-control(type='text', name='Email')
+          br
+          label(for='Contact') Phone No:
+          input#Contact.form-control(type='text', name='Contact')
+          br
+          input#Submit.btn.btn-default(type='Submit', name='Submit', onclick='javascript:store();')
+    script(src='script.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
