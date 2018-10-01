@@ -27,10 +27,12 @@ var Rain_Y = [701,705,476,430,478,446,545,504]
 var Temp_S = [20,19,29,17,23,22]
 var Temp_Y = [18,20,19,21,23,22,24,23]
 
+var ctx = document.getElementById("myChart");
+var ctx2 = document.getElementById("myChart2");
+
 function graph() 
 {
-  var ctx = document.getElementById("myChart");
-	var ctx2 = document.getElementById("myChart2");
+  
 
 	var chosen1 = document.getElementById("cause");
 
@@ -41,27 +43,32 @@ function graph()
   if(chosen1.value==1)
   {
     if(chosen2.value==1 & chosen3.value==1)
-    {
+    { clear();
       graph1();
     }
     else if(chosen2.value==1 & chosen3.value==2)
 	  { 
+			clear();
       graph2();
     }
     else if(chosen2.value==2 & chosen3.value==1)
     {	
+			clear();
       graph3();
     }
     else if(chosen2.value==2 & chosen3.value==2)		
     {	
+			clear();
       graph4();
     }
     else if(chosen2.value==3 & chosen3.value==1)
     {	
+			clear();
       graph5();
     }
     else
     {	
+			clear();
       graph6();
 		}
 	}
@@ -69,26 +76,32 @@ function graph()
   {
 		if(chosen2.value==1 & chosen3.value==1)
 	  {
+			clear();
       graph7();
     }
 		else if(chosen2.value==1 & chosen3.value==2)
 		{
+			clear();
         graph8();
     }
 	  else if(chosen2.value==2 & chosen3.value==1)
 	  {
+			clear();
       graph9();
     }
 		else if(chosen2.value==2 & chosen3.value==2)
 		{
+			clear();
       graph10();
     }
 	  else if(chosen2.value==3 & chosen3.value==1)
 		{
+			clear();
 		 	graph11();
 	  }
 	  else
 		{
+			clear();
 		 	graph12();
 		}
 	}
@@ -96,30 +109,46 @@ function graph()
   {	
     if(chosen2.value==1 & chosen3.value==1)
     {
+			clear();
 		  graph13();
 	  }
     else if(chosen2.value==1 & chosen3.value==2)
     {
+			clear();
   	  graph14();
 	  }
     else if(chosen2.value==2 & chosen3.value==1)
     {
+			clear();
 		  graph15();
 	  }
     else if(chosen2.value==2 & chosen3.value==2)		
     {
+			clear();
 		  graph16();
 	  }
     else if(chosen2.value==3 & chosen3.value==1)
     {
+			clear();
 		  graph17();
 	  }
     else
     {
+			clear();
 		  graph18();
 	  }
 }
 
+
+
+
+function clear()
+{
+	var C =ctx.getContext("2d");
+	C.clearRect(0,0,600,400);
+	var C1 =ctx2.getContext("2d");
+	C1.clearRect(0,0,1500,300);
+}
 
 
 /*var name =document.getElementById("name");
@@ -139,6 +168,7 @@ function store() {
 }*/
 function graph1()
 {
+	
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {

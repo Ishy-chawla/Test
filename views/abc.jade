@@ -161,6 +161,8 @@ html(lang='en')
         .wrapper
           h1
           h2 Data collected from various sources
+          br
+          br
           select#cause.center
             option#a(value='aa') Please select the cause
             option#b(value='1') Population
@@ -176,7 +178,8 @@ html(lang='en')
             option#j(value='1') Year
             option#k(value='2') State
 
-          canvas(id='myChart' width='600' height='450')
+          canvas(id='myChart' width='600' height='400')
+          br
           canvas(id='myChart2' width='600' height='150')
           script(src="script.js")
           //select(id="test1" )
@@ -190,7 +193,7 @@ html(lang='en')
           //select#xaxis.center(id="test3" onchange="graph()")
             option(value='1') Year
             option(value='2') State
-          canvas(id='myChart' width='600' height='450')
+          canvas(id='myChart' width='600' height='400')
           canvas(id='myChart2' width='600' height='150')
     script(src='https://www.gstatic.com/firebasejs/5.5.2/firebase.js')
     script(src="script.js")
